@@ -21,6 +21,8 @@ class F6251(Form):
             # TODO: refunds from 1040, line 21
             f['7'] = -f1040['10']
 
+        f['17'] = inputs.get('amt_basis_adjustment', 0)
+
         if (f.rowsum([str(i) for i in xrange(8,28)]) or 0) < 0:
             f.must_file = True
 

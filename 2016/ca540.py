@@ -24,6 +24,7 @@ class CA540(Form):
         f.must_file = True
         f.addForm(f)
 
+        f1040sa = None
         for i in f1040.forms:
             if i.__class__.__name__ == 'F1040sa':
                 f1040sa = i
